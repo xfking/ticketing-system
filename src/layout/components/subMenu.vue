@@ -13,8 +13,6 @@
       background-color="#242424"
       default-active="2"
       text-color="#fff"
-      @open="handleOpen"
-      @close="handleClose"
     >
       <template v-for="(item, index) in routerList" :key="index">
         <MenuItem :router="item" :index="index" />
@@ -35,15 +33,8 @@ const routerList = router
   .filter((item: RouteRecordRaw) => item.children?.length);
 
 onMounted(() => {
-  console.log("1111111111", useRouter().getRoutes());
+  // console.log("1111111111", useRouter().getRoutes());
 });
-
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
 </script>
 
 <style lang="less" scoped>

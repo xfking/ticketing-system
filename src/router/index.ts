@@ -23,6 +23,25 @@ export const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: "/user",
+    component: Layout,
+    meta: { title: "用户管理" },
+    children: [
+      {
+        path: "/userList",
+        name: "userList",
+        component: () => import("../views/user/userList.vue"),
+        meta: { title: "用户列表" },
+      },
+      {
+        path: "/userDetail",
+        name: "userDetail",
+        component: () => import("../views/user/userDetail.vue"),
+        meta: { title: "用户列表" },
+      },
+    ],
+  },
 ];
 
 const router = createRouter({

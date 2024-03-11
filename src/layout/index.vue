@@ -18,10 +18,11 @@ import SubMenu from "./components/subMenu.vue";
 <style lang="less" scoped>
 #main-box {
   width: 100%;
+  height: 100%;
   display: flex;
 
   .sub-menu {
-    height: 100vh !important;
+    height: 100%;
   }
 
   #content-box {
@@ -29,8 +30,8 @@ import SubMenu from "./components/subMenu.vue";
 
     .app-main {
       width: 100%;
-      min-height: 100vh;
-      //   height: calc(100vh - 64px);
+      // min-height: 100%;
+      height: calc(100% - 64px);
       padding: 15px;
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, 0.1);
