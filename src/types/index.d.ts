@@ -20,7 +20,7 @@ declare namespace API {
     size: number;
   }
   export interface CheckUserList {
-    value: API.CheckUserList;
+    value: any;
     name: string;
     createTime: string;
     operation: string;

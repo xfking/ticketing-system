@@ -38,7 +38,7 @@ export const routes: Array<RouteRecordRaw> = [
         path: "/userDetail",
         name: "userDetail",
         component: () => import("../views/user/userDetail.vue"),
-        meta: { title: "用户列表" },
+        meta: { title: "用户详情" },
       },
     ],
   },

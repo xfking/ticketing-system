@@ -9,7 +9,7 @@
         <MenuItem :router="item" :index="`${menuIndex}-${index}`" />
       </template>
     </el-sub-menu>
-    <el-menu-item v-else :index="menuIndex">
+    <el-menu-item v-else :index="menuIndex" @click="handJump()">
       <el-icon><document /></el-icon>
       <span>{{ menuItem.meta.title }}</span>
     </el-menu-item>
@@ -18,6 +18,9 @@
 
 <script lang="ts" setup>
 import { defineProps, computed } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const props = defineProps({
   router: {
@@ -36,4 +39,8 @@ const menuItem = computed(() => {
 const menuIndex = computed(() => {
   return props.index;
 });
+
+const handJump = () => {
+  router.push({ path: menuItem.value.path });
+};
 </script>
