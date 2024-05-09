@@ -24,6 +24,25 @@ export const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
+    path: "/order",
+    component: Layout,
+    meta: { title: "订单管理" },
+    children: [
+      {
+        path: "/orderList",
+        name: "orderList",
+        component: () => import("../views/order/orderList.vue"),
+        meta: { title: "订单列表" },
+      },
+      {
+        path: "/orderDetail",
+        name: "orderDetail",
+        component: () => import("../views/order/orderDetail.vue"),
+        meta: { title: "订单详情" },
+      },
+    ],
+  },
+  {
     path: "/user",
     component: Layout,
     meta: { title: "用户管理" },

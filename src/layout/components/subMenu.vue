@@ -33,7 +33,7 @@ const routerList = router
   .filter((item: RouteRecordRaw) => item.children?.length);
 
 onMounted(() => {
-  // console.log("1111111111", useRouter().getRoutes());
+  // console.log("1111111111", currentRoute);
 });
 </script>
 

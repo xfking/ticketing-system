@@ -3,6 +3,7 @@
     <SubMenu />
     <div id="content-box">
       <Header />
+      <BreadCrumb />
       <div class="app-main">
         <router-view />
       </div>
@@ -13,6 +14,7 @@
 <script setup lang="ts">
 import Header from "./components/header.vue";
 import SubMenu from "./components/subMenu.vue";
+import BreadCrumb from "./components/breadCrumb.vue";
 </script>
 
 <style lang="less" scoped>
@@ -29,9 +31,9 @@ import SubMenu from "./components/subMenu.vue";
     flex: 1;
 
     .app-main {
-      width: 100%;
+      width: calc(100vw - 220px);
       // min-height: 100%;
-      height: calc(100% - 64px);
+      height: calc(100% - 64px - 40px); // 顶部导航栏64px,面包屑40px
       padding: 15px;
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, 0.1);
